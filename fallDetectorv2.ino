@@ -85,7 +85,7 @@
       delay(1000);  // Delay of 1000 milli seconds or 1 second
       GPRS.println("AT+CMGS=\""+number+"\"\r"); // Replace x with mobile number
       delay(1000);
-      GPRS.println("emergency 23.17 80.02");// The SMS text you want to send
+      GPRS.println("emergency 23.17536 80.01612");// The SMS text you want to send
       delay(100);
       GPRS.println((char)26);// ASCII code of CTRL+Z
       delay(1000);
@@ -152,6 +152,7 @@
                       }
                       Serial.println("Message Send to "+num);  
                       SendMessage(num);
+                      delay(3000);
                     }
                }
            }
@@ -204,6 +205,7 @@
                       }
                       Serial.println("Message Send to "+num);  
                       SendMessage(num);
+                      delay(3000);
                     }
                }
                 
